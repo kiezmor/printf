@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/17 12:52:28 by lhordern          #+#    #+#             */
-/*   Updated: 2017/03/18 23:48:59 by vpluchar         ###   ########.fr       */
+/*   Created: 2016/12/17 12:52:28 by vpluchar          #+#    #+#             */
+/*   Updated: 2017/03/19 00:24:40 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ t_flag	flag_tab[NB_FLAG] =
 
 int			ft_printf(const char *format, ...)
 {
-	int		i;
+	int			i;
 	va_list		args;
-	int		comp;
+	int			comp;
 
 	i = 0;
 	comp = 0;
@@ -50,7 +50,7 @@ int			ft_printf(const char *format, ...)
 
 int			ft_checkflag(char flag, va_list args)
 {
-	int	i;
+	int		i;
 	char	*st_flag;
 
 	st_flag = ft_strnew(1);
@@ -58,7 +58,7 @@ int			ft_checkflag(char flag, va_list args)
 	i = 0;
 	if (flag == '%')
 	{
-		ft_putchar (flag);
+		ft_putchar(flag);
 		return (1);
 	}
 	while (i < NB_FLAG)
