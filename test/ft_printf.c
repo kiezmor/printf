@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/17 12:52:28 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/19 00:24:40 by vpluchar         ###   ########.fr       */
+/*   Created: 2017/03/19 05:05:24 by vpluchar          #+#    #+#             */
+/*   Updated: 2017/03/19 05:05:29 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "./libft/includes/libft.h"
 
-t_flag	flag_tab[NB_FLAG] =
+t_flag g_flag_tab[NB_FLAG] =
 {
 	{'c', &flag_c},
 	{'d', &flag_d},
@@ -63,8 +63,8 @@ int			ft_checkflag(char flag, va_list args)
 	}
 	while (i < NB_FLAG)
 	{
-		if (ft_strcmp(st_flag, &flag_tab[i].key) == 0)
-			return (flag_tab[i].ptrfunc(args));
+		if (ft_strcmp(st_flag, &g_flag_tab[i].key) == 0)
+			return (g_flag_tab[i].ptrfunc(args));
 		i++;
 	}
 	ft_putstr("Unknown command: %");
