@@ -26,7 +26,7 @@ static void			write_margin(int nb)
 			i++;
 		}
 		tab[i] = 0;
-		ft_printf_tmp(tab, -1, SET);
+		ft_ptf_tmp(tab, -1, SET);
 	}
 }
 
