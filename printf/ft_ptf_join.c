@@ -49,7 +49,7 @@ int			ft_ptf_join(t_flags *flags, char *str)
 		ft_ptf_margin(marg, flags->width - prec);
 	}
 	if (marg == ' ')
-		ft_ptf_buffer(str, BUF_WRITE);
+		ft_ptf_buff(str, BUF_WRITE);
 	if (prec > size && size)
 		ft_ptf_margin(marg_conversion(flags->conversion), prec - size);
 	ft_ptf_tmp(NULL, 0, SEND);
