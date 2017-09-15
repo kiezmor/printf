@@ -82,7 +82,7 @@ int							ft_ptf_uint(va_list arg)
 	flags = get_ptf_flags(GET_FLAGS);
 	nbr = get_arg(arg, flags->length);
 	base = get_base(flags->conversion);
-	ft_putnbr(nbr, base, flags->conversion);
+	ft_ptf_putnbr(nbr, base, flags->conversion);
 	u_rules(flags);
 	u_write(nbr, flags);
 	return (0);
