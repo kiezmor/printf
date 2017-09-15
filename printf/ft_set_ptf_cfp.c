@@ -38,7 +38,7 @@ static int  is_flags(int c, t_flags *flags)
 	if (c == ' ')
 		return (set_flags(3, flags));
 	if (c == '0')
-		return (set_flags(34 flags));
+		return (set_flags(4, flags));
 	return (0);
 }
 
@@ -47,7 +47,7 @@ int		set_ptf_flags(char *args, t_flags *flags)
 	int i;
 
 	i = 0;
-	while (is_flags(arg[i], flags))
+	while (is_flags(args[i], flags))
 		i++;
 	return (i);
 }
