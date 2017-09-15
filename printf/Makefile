@@ -49,8 +49,6 @@ test:
 	@$(CC) $(FLAGS) main.c $(NAME) $(LIB)
 	@./a.out
 	@rm ./a.out
-##	@./a.exe
-##	@rm ./a.exe
 
 lib:
 	@make -C $(LIB_DIR)
@@ -59,11 +57,11 @@ lib:
 ## << REMOVE KEBAB
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 ##	@echo "obj deleted"
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 ##	@echo "lib deleted"
 
 re: fclean all
