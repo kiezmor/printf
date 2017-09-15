@@ -47,10 +47,10 @@ test:
 	@make re
 	@make clean
 	@$(CC) $(FLAGS) main.c $(NAME) $(LIB)
-##	@./a.out
-##	@rm ./a.out
-	@./a.exe
-	@rm ./a.exe
+	@./a.out
+	@rm ./a.out
+##	@./a.exe
+##	@rm ./a.exe
 
 lib:
 	@make -C $(LIB_DIR)
