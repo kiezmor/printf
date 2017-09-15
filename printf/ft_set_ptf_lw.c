@@ -30,7 +30,7 @@ static int  keep_length(char c, t_flags *flags)
 
 static int  set_length(char c, t_flags *flags)
 {
-    flags->length = keep_lentgh(c, flags);
+    flags->length = keep_length(c, flags);
     flags->setting = 1;
     if (c == 'L' || c == 'H')
         return (2);
