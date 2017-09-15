@@ -70,7 +70,7 @@ int set_ptf_precision(char *arg, va_list args, t_flags *flags)
         }
         else
         {
-            flags->precision = ft_atoi(&arg);
+            flags->precision = ft_ptf_atoi(&arg);
             flags->setting = 1;
         }
     }

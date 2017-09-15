@@ -49,3 +49,27 @@ int	ft_ptf_double_sc(double f, int size)
 	ft_ptf_putnbr(nb, 10, 0);
 	return (0);
 }
+
+int		ft_ptf_atoi(char **arg)
+{
+	int		sum;
+	int		sign;
+	char	*str;
+
+	str = *arg;
+	sign = 1;
+	sum = 0;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		sum = (sum * 10) + *str - '0';
+		str++;
+	}
+	*arg = str;
+	return (sign * sum);
+}
