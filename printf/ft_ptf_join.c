@@ -45,7 +45,7 @@ int			ft_ptf_join(t_flags *flags, char *str)
 	if (!flags->FLAGS_DASH)
 	{
 		if (marg == '0')
-			ft_ptf_buffer(str, BUF_WRITE);
+			ft_ptf_buff(str, BUF_WRITE);
 		ft_ptf_margin(marg, flags->width - prec);
 	}
 	if (marg == ' ')
