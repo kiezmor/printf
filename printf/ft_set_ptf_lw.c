@@ -73,7 +73,7 @@ int	set_ptf_width(char *arg, va_list args, t_flags *flags)
 			flags->width = nbr;
 		}
 		else
-			flags->width = ft_ptf_atoi(&args);
+			flags->width = ft_ptf_atoi(&arg);
 		if (flags->width)
 			flags->setting = 1;
 	}
