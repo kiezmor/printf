@@ -63,7 +63,7 @@ static void					write_int(long long nb, t_flags *flags)
 		sign = "+";
 	else if (flags->FLAGS_SPACE)
 		sign = " ";
-	ft_printf_join(flags, sign);
+	ft_ptf_join(flags, sign);
 }
 
 int							ft_ptf_int(va_list arg)
@@ -73,7 +73,7 @@ int							ft_ptf_int(va_list arg)
 
 	flags = get_ptf_flags(GET_FLAGS);
 	nbr = get_arg(arg, flags->length);
-	ft_putnbr(get_nbr(nbr), 10, flags->conversion);
+	ft_pft_putnbr(get_nbr(nbr), 10, flags->conversion);
 	int_rules(flags);
 	write_int(nbr, flags);
 	return (0);
