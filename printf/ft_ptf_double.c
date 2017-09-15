@@ -70,7 +70,7 @@ static void		double_output(double f, int size, char conversion)
 	if (conversion == 'f')
 		ft_ptf_putdouble(f, size);
 	else if (conversion == 'e')
-		ft_ptf_double_scient(f, size);
+		ft_ptf_double_sc(f, size);
 }
 
 int				ft_ptf_double(double f, int size, char conversion)
