@@ -23,14 +23,14 @@ static int  is_long(char c)
 static int  keep_length(char c, t_flags *flags)
 {
     if (is_long(flags->length) && (c == 'h' || c == 'H'))
-        return (flags->length)
+        return (flags->length);
     else
         return (c);
 }
 
 static int  set_length(char c, t_flags *flags)
 {
-    flags->lentgh = keep_lentgh(c, flags);
+    flags->length = keep_lentgh(c, flags);
     flags->setting = 1;
     if (c == 'L' || c == 'H')
         return (2);
@@ -73,7 +73,7 @@ int	set_ptf_width(char *arg, va_list args, t_flags *flags)
 			flags->width = nbr;
 		}
 		else
-			flags->width = ft_atoi(&args);
+			flags->width = ft_ptf_atoi(&args);
 		if (flags->width)
 			flags->setting = 1;
 	}
