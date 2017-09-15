@@ -77,5 +77,9 @@ int							set_ptf_precision(char *arg, va_list args, t_flags *flags);
 int							set_ptf_width(char *arg, va_list args, t_flags *flags);
 int							set_ptf_length(char *arg, t_flags *flags);
 int							ft_ptf_putnbr(unsigned long long nbr, int base, int c);
+double						ft_ptf_pow(int base, int pow);
+int							ft_ptf_double(double f, int size, char conversion);
+int							ft_ptf_double_sc(double f, int size);
+int							ft_ptf_putdouble(double f, int size);
 
 #endif
