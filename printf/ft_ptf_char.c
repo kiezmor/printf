@@ -36,7 +36,7 @@ static int	write_char(va_list ap, t_flags *flags)
 	else
 	{
 		tab[0] = wch;
-		ft_ptf_buffer(tab, BUF_CHAR);
+		ft_ptf_buff(tab, BUF_CHAR);
 	}
 	if (flags->FLAGS_DASH)
 		ft_ptf_margin(' ', size);
@@ -45,15 +45,15 @@ static int	write_char(va_list ap, t_flags *flags)
 
 int			ft_ptf_char(va_list ap)
 {
-	t_printf_flags	*flags;
-	char			tab[2];
+	t_flags		*flags;
+	char		tab[2];
 
 	tab[1] = 0;
 	flags = get_ptf_flags(GET_FLAGS);
 	if (!flags->setting)
 	{
 		tab[0] = va_arg(ap, int);
-		ft_ptf_buffer(tab, BUF_CHAR);
+		ft_ptf_buff(tab, BUF_CHAR);
 	}
 	else
 		write_char(ap, flags);

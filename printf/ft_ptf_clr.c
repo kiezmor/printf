@@ -37,7 +37,7 @@ static int	write_clr(char *clr, char *style)
 	balise[i] = 'm';
 	balise[i + 1] = 0;
 	ft_ptf_buff(balise, BUF_WRITE);
-	return (1):
+	return (1);
 }
 
 static int	check_clr(char *tab, char *style)
@@ -131,7 +131,7 @@ int	ft_ptf_clr(char *str, va_list args)
 	if (!i)
 	{
 		i = 1;
-		ft_ptf_buffer("{", BUF_CHAR);
+		ft_ptf_buff("{", BUF_CHAR);
 	}
 	return (i);
 }

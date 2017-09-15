@@ -34,7 +34,7 @@ t_func	g_flags[] =
 	{ft_ptf_address, 'p'},/**/
 	{ft_ptf_float, 'f'},/**/
 	{ft_ptf_float, 'e'},/**/
-	{ft_ptf_bin, 'b'},
+	/*{ft_ptf_bin, 'b'},*/
 	{NULL, -1}
 };
 
@@ -52,7 +52,7 @@ static int	ptf_convertion(char c, va_list arg)
 	return (1);
 }
 
-static int	invalid_conversion(t_printf_flags *flags)
+static int	invalid_conversion(t_flags *flags)
 {
 	char	tab[2];
 	char	marg;
@@ -64,13 +64,13 @@ static int	invalid_conversion(t_printf_flags *flags)
 	marg = (flags->FLAGS_ZERO) ? '0' : ' ';
 	if (!flags->FLAGS_DASH)
 		ft_ptf_margin(marg, flags->width - 1);
-	ft_printf_buffer(tab, BUF_CHAR);
+	ft_ptf_buff(tab, BUF_CHAR);
 	if (flags->FLAGS_DASH)
 		ft_ptf_margin(' ', flags->width - 1);
 	return (0);
 }
 
-int			ft_ptf_conversion(va_list ap, t_printf_flags *flags)
+int			ft_ptf_conversion(va_list ap, t_flags *flags)
 {
 	if (ptf_convertion(flags->conversion, ap))
 		return (invalid_conversion(flags));

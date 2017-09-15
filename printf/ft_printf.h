@@ -37,7 +37,7 @@
 typedef struct	s_func
 {
 	int			(*ptrfunc)(va_list ap);
-	char		*key;
+	char		key;
 }				t_func;
 
 typedef struct	s_flags
@@ -50,15 +50,15 @@ typedef struct	s_flags
 	int			setting;
 }				t_flags;
 
-int							ft_printf(const char *format, ...);
+int							ft_printf(char *format, ...);
 int							ft_ptf_cands(char *fmt, va_list args);
 int							ft_ptf_buff(char *str, int act);
 int							ft_ptf_cands(char *fmt, va_list args);
 int							ft_ptf_char(va_list ap);
 int							ft_ptf_wchar(int wch);
 int							ft_ptf_clr(char *str, va_list args);
-int							ft_ptf_conversion(va_list ap, t_printf_flags *flags);
-void						ft_ptf_margin(char c, int a);
+int							ft_ptf_conversion(va_list ap, t_flags *flags);
+void							ft_ptf_margin(char c, int a);
 int							ft_ptf_string(va_list arg);
 int							ft_ptf_number(va_list arg);
 int							ft_ptf_percentage(va_list arg);

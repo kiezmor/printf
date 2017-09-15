@@ -17,12 +17,12 @@ int	ft_ptf_percentage(va_list arg)
 	t_flags	*flags;
 	char			margin;
 
-	(void)ap;
+	(void)arg;
 	flags = get_ptf_flags(GET_FLAGS);
 	margin = (flags->FLAGS_ZERO) ? '0' : ' ';
 	if (!flags->FLAGS_DASH)
 		ft_ptf_margin(margin, flags->width - 1);
-	ft_ptf_buffer("%", BUF_WRITE);
+	ft_ptf_buff("%", BUF_WRITE);
 	if (flags->FLAGS_DASH)
 		ft_ptf_margin(' ', flags->width - 1);
 	return (0);
@@ -35,7 +35,7 @@ int		ft_ptf_number(va_list arg)
 
 	flags = get_ptf_flags(GET_FLAGS);
 	ptr = va_arg(arg, int *);
-	*ptr = ft_ptf_buffer(NULL, 0);
+	*ptr = ft_ptf_buff(NULL, 0);
 	return (0);
 }
 
@@ -55,8 +55,8 @@ int			ft_ptf_string(va_list arg)
 	int					size;
 
 	flags = get_ptf_flags(GET_FLAGS);
-	if (flags->length == 'l')
-		return (ft_ptf_wstring(arg, flags));
+	//if (flags->length == 'l')
+	//	return (ft_ptf_wstring(arg, flags));
 	str = va_arg(arg, char *);
 	string_rules(flags, str);
 	size = ft_ptf_tmp(str, flags->precision, SET);
@@ -73,7 +73,7 @@ void	ft_ptf_margin(char c, int a)
 	{
 		i = 0;
 		while (i++ < a)
-			ft_ptf_buffer(&c, BUF_CHAR);
+			ft_ptf_buff(&c, BUF_CHAR);
 	}
 }
 

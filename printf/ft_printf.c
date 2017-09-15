@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int			ft_printf(const char *format, ...)
+int			ft_printf(char *fmt, ...)
 {
 	va_list		args;
 
@@ -22,7 +22,7 @@ int			ft_printf(const char *format, ...)
 		if (*fmt == '%')
 			fmt += ft_ptf_cands(fmt, args);
 		else if (*fmt == '{')
-			fmt += ft_ptf_clr(fmt, ap);
+			fmt += ft_ptf_clr(fmt, args);
 		else
 			ft_ptf_buff(fmt++, BUF_CHAR);
 	}
