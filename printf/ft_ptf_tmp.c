@@ -41,7 +41,7 @@ int				ft_ptf_tmp(char *str, int s, int act)
 	else if (act == GET)
 		return (size);
 	else if (act == SEND)
-		ft_ptf_buffer(tmp, BUF_WRITE);
+		ft_ptf_buff(tmp, BUF_WRITE);
 	size = 0;
 	tmp[0] = 0;
 	return (size);
