@@ -82,5 +82,6 @@ int							ft_ptf_double(double f, int size, char conversion);
 int							ft_ptf_double_sc(double f, int size);
 int							ft_ptf_putdouble(double f, int size);
 int							ft_ptf_atoi(char **arg);
+int							ft_strequ(char *s1, char *s2);
 
 #endif
