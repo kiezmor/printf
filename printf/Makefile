@@ -19,7 +19,7 @@ DOBJ	=	obj
 INC		=	-I inc/
 
 LIB		=	./libft/libft.a
-LIBF	=	-l $(LIB)
+LIBF	=	-l$(LIB)
 
 SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
 SDIR	=	$(shell find $(DSRC) -type d)
