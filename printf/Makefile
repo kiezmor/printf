@@ -18,7 +18,7 @@ DSRC	=	src
 DOBJ	=	obj
 INC		=	-I inc/
 
-LIB		=	./libft/libft.a
+LIB		=	libft/libft.a
 LIBF	=	-l$(LIB)
 
 SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
