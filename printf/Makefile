@@ -28,7 +28,7 @@ OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(LIB) $(OBJ)
+	ar rc $(NAME) $(LIB) $(OBJ)
 	@echo "lib created"
 
 $(DOBJ)/%.o:%.c
