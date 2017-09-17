@@ -17,41 +17,22 @@ FLAGS	=	-Wall -Werror -Wextra
 DSRC	=	src
 DOBJ	=	obj
 INC		=	-I inc/
+LIB		=	./libft/libft.a
 
 SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
 SDIR	=	$(shell find $(DSRC) -type d)
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 
-##REMOVE KEBAB >>
-
-LIB = ./libft/libft.a
-# LIB_DIR = ./libft/
-# LIB_INC = ./libft/includes/
-
-# ## << REMOVE KEBAB
-
-# SRC	= ft_printf.c ft_ptf_buff.c ft_ptf_cands.c ft_ptf_char.c ft_ptf_clr.c\
-# ft_ptf_conversion.c ft_ptf_flags_1.c ft_ptf_flags_2.c ft_ptf_int.c\
-# ft_ptf_join.c ft_ptf_tmp.c ft_ptf_uint.c ft_set_ptf_cfp.c ft_set_ptf_lw.c\
-# get_ptf_flags.c ft_ptf_putnbr.c ft_ptf_double.c ft_ptf_pdsc.c ft_ptf_putd.c\
-
-# OBJ	= $(SRC:.c=.o)
-
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(INC) $(OBJ)
 	@echo "lib created"
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
 	$(CC) $(FLAGS) $(INC) -c $< -o $@
-
-# $(OBJ):
-# 	@$(CC) $(FLAGS) -c $(SRC) -I $(LIB_INC)
-# 	@echo "obj created"
 
 ##REMOVE KEBAB >>
 

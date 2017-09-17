@@ -136,14 +136,14 @@ int	ft_ptf_clr(char *str, va_list args)
 	return (i);
 }
 
-int	ft_strequ(char *s1, char *s2)
-{
-	if (*s1 == 0)
-		return (0);
-	while (*s1)
-	{
-		if (*s1++ != *s2++)
-			return (0);
-	}
-	return (1);
-}
+// int	ft_strequ(char *s1, char *s2)
+// {
+// 	if (*s1 == 0)
+// 		return (0);
+// 	while (*s1)
+// 	{
+// 		if (*s1++ != *s2++)
+// 			return (0);
+// 	}
+// 	return (1);
+// }
