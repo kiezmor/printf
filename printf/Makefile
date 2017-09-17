@@ -24,7 +24,8 @@ LIBF	=	./libft/srcs/ft_strequ.c
 SRC		=	$(shell find $(DSRC) -name '*.c' -type f), $(LIBF)
 SDIR	=	$(shell find $(DSRC) -type d)
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
-OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC) $(LIBF))
+SRCS	=	$(SRC) + $(LIBF)
+OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRCS))
 
 all: $(NAME)
 
