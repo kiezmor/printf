@@ -10,43 +10,55 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libftprintf.a
+NAME	=	libftprintf.a
+CC		=	gcc
+FLAGS	=	-Wall -Werror -Wextra
 
-CC	= gcc
-FLAGS	= -Wall -Werror -Wextra
+DSRC	=	src
+DOBJ	=	obj
+INC		=	-I inc/
+
+SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
+SDIR	=	$(shell find $(DSRC) -type d)
+ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
+OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 
 ##REMOVE KEBAB >>
 
 LIB = ./libft/libft.a
-LIB_DIR = ./libft/
-LIB_INC = ./libft/includes/
+# LIB_DIR = ./libft/
+# LIB_INC = ./libft/includes/
 
-## << REMOVE KEBAB
+# ## << REMOVE KEBAB
 
-SRC	= ft_printf.c ft_ptf_buff.c ft_ptf_cands.c ft_ptf_char.c ft_ptf_clr.c\
-ft_ptf_conversion.c ft_ptf_flags_1.c ft_ptf_flags_2.c ft_ptf_int.c\
-ft_ptf_join.c ft_ptf_tmp.c ft_ptf_uint.c ft_set_ptf_cfp.c ft_set_ptf_lw.c\
-get_ptf_flags.c ft_ptf_putnbr.c ft_ptf_double.c ft_ptf_pdsc.c ft_ptf_putd.c\
+# SRC	= ft_printf.c ft_ptf_buff.c ft_ptf_cands.c ft_ptf_char.c ft_ptf_clr.c\
+# ft_ptf_conversion.c ft_ptf_flags_1.c ft_ptf_flags_2.c ft_ptf_int.c\
+# ft_ptf_join.c ft_ptf_tmp.c ft_ptf_uint.c ft_set_ptf_cfp.c ft_set_ptf_lw.c\
+# get_ptf_flags.c ft_ptf_putnbr.c ft_ptf_double.c ft_ptf_pdsc.c ft_ptf_putd.c\
 
-OBJ	= $(SRC:.c=.o)
+# OBJ	= $(SRC:.c=.o)
 
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-##	@echo "lib created"
+	@echo "lib created"
 
-$(OBJ):
-	@$(CC) $(FLAGS) -c $(SRC) -I $(LIB_INC)
-##	@echo "obj created"
+$(DOBJ)/%.o:%.c
+	@mkdir -p $(ODIR)
+	$(CC) $(FLAGS) $(INC) -c $< -o $@
+
+# $(OBJ):
+# 	@$(CC) $(FLAGS) -c $(SRC) -I $(LIB_INC)
+# 	@echo "obj created"
 
 ##REMOVE KEBAB >>
 
 test:
 	@make re
 	@make clean
-	@$(CC) $(FLAGS) main.c $(NAME) $(LIB)
+	@$(CC) $(FLAGS) main.c $(LIB) $(NAME) 
 	@./a.out
 	@rm ./a.out
 
@@ -58,10 +70,10 @@ lib:
 
 clean:
 	rm -f $(OBJ)
-##	@echo "obj deleted"
+	@echo "obj deleted"
 
 fclean: clean
 	rm -f $(NAME)
-##	@echo "lib deleted"
+	@echo "lib deleted"
 
 re: fclean all
