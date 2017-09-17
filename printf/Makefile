@@ -17,9 +17,10 @@ FLAGS	=	-Wall -Werror -Wextra
 DSRC	=	src
 DOBJ	=	obj
 INC		=	-I inc/
+
 LIB		=	./libft/libft.a
 
-SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
+SRC		=	$(shell find $(DSRC) -name '*.c' -type f), libft/srcs/ft_strequ.c
 SDIR	=	$(shell find $(DSRC) -type d)
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
