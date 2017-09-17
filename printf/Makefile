@@ -19,11 +19,12 @@ DOBJ	=	obj
 INC		=	-I inc/
 
 LIB		=	./libft/libft.a
+LIBF	=	./libft/srcs/ft_strequ.c
 
-SRC		=	$(shell find $(DSRC) -name '*.c' -type f), libft/srcs/ft_strequ.c
-# SDIR	=	$(shell find $(DSRC) -type d)
-ODIR	=	$(addprefix $(DOBJ)/, $(DSRC))
-OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
+SRC		=	$(shell find $(DSRC) -name '*.c' -type f), $(LIBF)
+SDIR	=	$(shell find $(DSRC) -type d)
+ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
+OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC) $(LIBF))
 
 all: $(NAME)
 
