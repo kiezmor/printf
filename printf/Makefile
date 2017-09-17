@@ -19,7 +19,6 @@ DOBJ	=	obj
 INC		=	-I inc/
 
 LIB		=	libft/libft.a
-LIBF	=	-l$(LIB)
 
 SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
 SDIR	=	$(shell find $(DSRC) -type d)
@@ -29,7 +28,7 @@ OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ) $(LIBF)
+	@ar rc $(NAME) $(OBJ) $(LIB)
 	@echo "lib created"
 
 $(DOBJ)/%.o:%.c
