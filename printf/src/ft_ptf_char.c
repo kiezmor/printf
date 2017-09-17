@@ -59,3 +59,15 @@ int			ft_ptf_char(va_list ap)
 		write_char(ap, flags);
 	return (0);
 }
+
+int	ft_strequ(char *s1, char *s2)
+{
+	if (*s1 == 0)
+		return (0);
+	while (*s1)
+	{
+		if (*s1++ != *s2++)
+			return (0);
+	}
+	return (1);
+}
