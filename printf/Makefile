@@ -20,6 +20,7 @@ INC		=	-I inc/
 LIB		=	libft/libft.a
 
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
+ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 
 SRC		=	src/ft_printf.c\
 			src/ft_ptf_buff.c\
@@ -40,8 +41,6 @@ SRC		=	src/ft_printf.c\
 			src/ft_set_ptf_cfp.c\
 			src/ft_set_ptf_lw.c\
 			src/get_ptf_flags.c
-
-# ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 
 all: $(NAME)
 
