@@ -66,7 +66,7 @@ $(NAME): $(OBJ)
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
-	@echo -e "\033[0;32m [OK] \033[0m       \033[0;33m Compiling:\033[0m" $<
+	@echo "${G}[OK]${NC}	${Y}Compiling:${NC}" $<
 	@$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 #REMOVE KEBAB >>
