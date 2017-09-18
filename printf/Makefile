@@ -14,7 +14,7 @@
 
 NAME	=	libftprintf.a
 CC		=	gcc
-FLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra -fdiagnostics-color=auto
 
 # Directories
 
@@ -66,9 +66,7 @@ $(NAME): $(OBJ)
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
-	@echo "${Y}create the objects${NC}"
-	@$(CC) $(FLAGS) $(INC) -c $< -o $@
-	@echo "${G}objects created${NC}"
+	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 #REMOVE KEBAB >>
 
