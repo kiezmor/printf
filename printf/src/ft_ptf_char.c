@@ -14,7 +14,7 @@
 
 int			ft_ptf_wchar(int wch)
 {
-	write(1, &wch, sizeof(wint_t));
+	write(1, &wch, sizeof(wchar_t));
 	return(1);
 }
 

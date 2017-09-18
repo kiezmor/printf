@@ -20,7 +20,27 @@ INC		=	-I inc/
 
 LIB		=	libft/libft.a
 
-SRC		=	$(shell find $(DSRC) -name '*.c' -type f)
+SRC		=	src/ft_printf.c\
+			# src/ft_ptf_bin.c
+			src/ft_ptf_buff.c\
+			src/ft_ptf_cands.c\
+			src/ft_ptf_char.c\
+			src/ft_ptf_clr.c\
+			src/ft_ptf_conversion.c\
+			src/ft_ptf_double.c\
+			src/ft_ptf_flags_1.c\
+			src/ft_ptf_flags_2.c\
+			src/ft_ptf_int.c\
+			src/ft_ptf_join.c\
+			src/ft_ptf_pdsc.c\
+			src/ft_ptf_putd.c\
+			src/ft_ptf_putnbr.c\
+			src/ft_ptf_tmp.c\
+			src/ft_ptf_uint.c\
+			src/ft_set_ptf_cfp.c\
+			src/ft_set_ptf_lw.c\
+			src/get_ptf_flags.c
+
 SDIR	=	$(shell find $(DSRC) -type d)
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
@@ -36,6 +56,11 @@ $(DOBJ)/%.o:%.c
 	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 ##REMOVE KEBAB >>
+
+try:
+	@echo $(SDIR)
+	@echo $(ODIR)
+	@echo $(OBJ)
 
 test:
 	@make re
