@@ -14,7 +14,7 @@
 
 NAME	=	libftprintf.a
 CC		=	gcc
-FLAGS	=	-Wall -Werror -Wextra -fdiagnostics-color=auto
+FLAGS	=	-Wall -Werror -Wextra
 
 # Directories
 
@@ -66,7 +66,8 @@ $(NAME): $(OBJ)
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
-	$(CC) $(FLAGS) $(INC) -c $< -o $@
+	@echo -e "\033[0;32m [OK] \033[0m       \033[0;33m Compiling:\033[0m" $<
+	@$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 #REMOVE KEBAB >>
 
