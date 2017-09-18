@@ -50,7 +50,7 @@ $(NAME): $(OBJ)
 	@echo "lib created"
 
 $(DOBJ)/%.o:%.c
-	# @mkdir -p $(ODIR)
+	@mkdir -p $(ODIR)
 	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 ##REMOVE KEBAB >>
