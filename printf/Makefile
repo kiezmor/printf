@@ -14,7 +14,6 @@ NAME	=	libftprintf.a
 CC		=	gcc
 FLAGS	=	-Wall -Werror -Wextra
 
-DSRC	=	src
 DOBJ	=	obj
 INC		=	-I inc/
 
@@ -41,8 +40,7 @@ SRC		=	src/ft_printf.c\
 			src/ft_set_ptf_lw.c\
 			src/get_ptf_flags.c
 
-SDIR	=	$(shell find $(DSRC) -type d)
-ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
+# ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 
 all: $(NAME)
@@ -52,15 +50,10 @@ $(NAME): $(OBJ)
 	@echo "lib created"
 
 $(DOBJ)/%.o:%.c
-	@mkdir -p $(ODIR)
+	# @mkdir -p $(ODIR)
 	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 ##REMOVE KEBAB >>
-
-try:
-	@echo $(SDIR)
-	@echo $(ODIR)
-	@echo $(OBJ)
 
 test:
 	@make re
