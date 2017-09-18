@@ -22,7 +22,6 @@ LIB		=	libft/libft.a
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 
 SRC		=	src/ft_printf.c\
-			# src/ft_ptf_bin.c
 			src/ft_ptf_buff.c\
 			src/ft_ptf_cands.c\
 			src/ft_ptf_char.c\
