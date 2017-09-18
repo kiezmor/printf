@@ -14,6 +14,7 @@ NAME	=	libftprintf.a
 CC		=	gcc
 FLAGS	=	-Wall -Werror -Wextra
 
+SDIR	=	src
 DOBJ	=	obj
 INC		=	-I inc/
 
