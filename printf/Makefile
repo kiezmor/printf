@@ -10,15 +10,27 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Compilation
+
 NAME	=	libftprintf.a
 CC		=	gcc
 FLAGS	=	-Wall -Werror -Wextra
+
+# Directories
 
 SDIR	=	src
 DOBJ	=	obj
 INC		=	-I inc/
 
 LIB		=	libft/libft.a
+
+# Colors
+
+G		=	\x1b[32m
+R		=	\x1b[31m
+Y		=	\x1b[33m
+NC		=	\x1b[0m
+# Files
 
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
@@ -43,15 +55,20 @@ SRC		=	src/ft_printf.c\
 			src/ft_set_ptf_lw.c\
 			src/get_ptf_flags.c
 
+# Rules
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	@echo "${Y}create the library${NC}"
 	@ar rc $(NAME) $(OBJ)
-	@echo "lib created"
+	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
-	$(CC) $(FLAGS) $(INC) -c $< -o $@
+	@echo "${Y}create the objects${NC}"
+	@$(CC) $(FLAGS) $(INC) -c $< -o $@
+	@echo "${G}objects created${NC}"
 
 #REMOVE KEBAB >>
 
@@ -69,11 +86,11 @@ lib:
 # << REMOVE KEBAB
 
 clean:
-	rm -f $(OBJ)
-	@echo "obj deleted"
+	@rm -f $(OBJ)
+	@echo "${R}objects deleted${NC}"
 
 fclean: clean
-	rm -f $(NAME)
-	@echo "lib deleted"
+	@rm -f $(NAME)
+	@echo "${R}library deleted${NC}"
 
 re: fclean all
