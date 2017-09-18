@@ -53,7 +53,7 @@ $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
 	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
-##REMOVE KEBAB >>
+#REMOVE KEBAB >>
 
 test:
 	@make re
@@ -66,7 +66,7 @@ lib:
 	@make -C $(LIB_DIR)
 	@make clean -C $(LIB_DIR)
 
-## << REMOVE KEBAB
+# << REMOVE KEBAB
 
 clean:
 	rm -f $(OBJ)
