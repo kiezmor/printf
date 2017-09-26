@@ -22,14 +22,13 @@ SDIR	=	src
 DOBJ	=	obj
 INC		=	-I inc/
 
-LIB		=	libft/libft.a
-
 # Colors
 
 G		=	\x1b[32m
 R		=	\x1b[31m
 Y		=	\x1b[33m
 NC		=	\x1b[0m
+
 # Files
 
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
@@ -61,35 +60,31 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
-	@ar rc $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
 	@echo "${G}[OK]${NC}	${Y}Compiling:${NC}" $<
-	@$(CC) $(FLAGS) $(INC) -c $< -o $@
+	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 #REMOVE KEBAB >>
 
 test:
 	@make re
 	@make clean
-	@$(CC) $(FLAGS) main.c $(LIB) $(NAME) 
+	@$(CC) $(FLAGS) main.c $(NAME) 
 	@./a.out
 	@rm ./a.out
-
-lib:
-	@make -C $(LIB_DIR)
-	@make clean -C $(LIB_DIR)
 
 # << REMOVE KEBAB
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 	@echo "${R}objects deleted${NC}"
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 	@echo "${R}library deleted${NC}"
 
 re: fclean all

@@ -11,19 +11,10 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <windows.h>
 #include "ft_printf.h"
 
 int	main(void)
 {
-	// int		v = 0;
-
-	// while (v <= 12)
-	// {
-	// 	printf("{}%c{}\n", MOD[v]);
-	// 	v++;
-	// }
-	
 	char	*str;
 	char	ch;
 	int		i;
@@ -34,11 +25,11 @@ int	main(void)
 	// int		p = 0;
 	// while (p++ <= 100000 * 100)
 	// 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 	
-	void	*bite = "300";
-	ft_putstr(bite);
-	ft_putchar('\n');
+	// void	*bite = "300";
+	// ft_putstr(bite);
+	// ft_putchar('\n');
 
 	printf("%s\n", "------------------------------------------------");
 
@@ -60,8 +51,8 @@ int	main(void)
 	
 	wchar_t	wc = L'\t';
 	wchar_t	*blbl = L"|Hello, world!|";
-	ft_putwcs(blbl);
-	ft_putwchar('\n');
+	// ft_putwcs(blbl);
+	// ft_putwchar('\n');
 	printf("|WC:%C|\n", wc);
 	printf("|WS:%S|\n", blbl);
 
