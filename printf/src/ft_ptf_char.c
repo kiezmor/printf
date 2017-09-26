@@ -14,8 +14,13 @@
 
 int			ft_ptf_wchar(int wch)
 {
-	write(1, &wch, sizeof(wchar_t));
-	return(1);
+	if (wch)
+	{
+		write(1, &wch, sizeof(wchar_t));
+		return(1);
+	}
+	else
+		return (0);
 }
 
 static int	write_char(va_list ap, t_flags *flags)
