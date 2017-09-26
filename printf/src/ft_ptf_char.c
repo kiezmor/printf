@@ -17,7 +17,7 @@ int			ft_ptf_wchar(int wch)
 	if (wch)
 	{
 		write(1, &wch, sizeof(wchar_t));
-		return(1);
+		return (1);
 	}
 	else
 		return (0);
