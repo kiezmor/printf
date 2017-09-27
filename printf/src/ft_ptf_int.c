@@ -71,7 +71,7 @@ int							ft_ptf_int(va_list arg)
 	t_flags	*flags;
 	long long		nbr;
 
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	nbr = get_arg(arg, flags->length);
 	ft_ptf_putnbr(get_nbr(nbr), 10, flags->conversion);
 	int_rules(flags);

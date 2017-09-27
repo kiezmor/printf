@@ -14,26 +14,26 @@
 
 t_func	g_flags[] =
 {
-	{ft_ptf_percentage, '%'},/**/
-	{ft_ptf_int, 'd'},/**/
-	{ft_ptf_int, 'i'},/**/
-	{ft_ptf_uint, 'x'},/**/
-	{ft_ptf_uint, 'X'},/**/
-	{ft_ptf_uint, 'o'},/**/
-	{ft_ptf_uint, 'u'},/**/
-	{ft_ptf_long, 'D'},/**/
-	{ft_ptf_long, 'U'},/**/
-	{ft_ptf_long, 'O'},/**/
-	{ft_ptf_long, 'C'},/**/
-	{ft_ptf_long, 'S'},/**/
-	{ft_ptf_long, 'F'},/**/
-	{ft_ptf_long, 'E'},/**/
-	{ft_ptf_number, 'n'},/**/
+	{ft_ptf_percentage, '%'},
+	{ft_ptf_int, 'd'},
+	{ft_ptf_int, 'i'},
+	{ft_ptf_uint, 'x'},
+	{ft_ptf_uint, 'X'},
+	{ft_ptf_uint, 'o'},
+	{ft_ptf_uint, 'u'},
+	{ft_ptf_long, 'D'},
+	{ft_ptf_long, 'U'},
+	{ft_ptf_long, 'O'},
+	{ft_ptf_long, 'C'},
+	{ft_ptf_long, 'S'},
+	{ft_ptf_long, 'F'},
+	{ft_ptf_long, 'E'},
+	{ft_ptf_number, 'n'},
 	{ft_ptf_string, 's'},
-	{ft_ptf_char, 'c'},/*theor*/
-	{ft_ptf_address, 'p'},/**/
-	{ft_ptf_float, 'f'},/**/
-	{ft_ptf_float, 'e'},/**/
+	{ft_ptf_char, 'c'},
+	{ft_ptf_address, 'p'},
+	{ft_ptf_float, 'f'},
+	{ft_ptf_float, 'e'},
 	{ft_ptf_bin, 'b'},
 	{NULL, -1}
 };

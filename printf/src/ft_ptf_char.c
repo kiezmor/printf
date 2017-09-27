@@ -44,7 +44,7 @@ int			ft_ptf_char(va_list ap)
 	char		tab[2];
 
 	tab[1] = 0;
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	if (!flags->setting)
 	{
 		tab[0] = va_arg(ap, int);

@@ -26,7 +26,7 @@ static int	trivial(unsigned long long nbr)
 {
 	t_flags	*flags;
 
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	if (flags->precision == 0)
 	{
 		if (flags->FLAGS_HASH && flags->conversion == 'o')

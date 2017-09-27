@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_ptf_flags.c                                    :+:      :+:    :+:   */
+/*   ft_g_flags.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/21 03:39:22 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/21 03:39:22 by vpluchar         ###   ########.fr       */
+/*   Created: 2017/09/27 23:48:45 by vpluchar          #+#    #+#             */
+/*   Updated: 2017/09/27 23:48:45 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void init(t_flags *flags)
     flags->setting = 0;
 }
 
-t_flags *get_ptf_flags(int act)
+t_flags *ft_g_flags(int act)
 {
     static t_flags  flags;
 

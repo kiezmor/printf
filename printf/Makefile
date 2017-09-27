@@ -52,7 +52,7 @@ SRC		=	src/ft_printf.c\
 			src/ft_ptf_uint.c\
 			src/ft_set_ptf_cfp.c\
 			src/ft_set_ptf_lw.c\
-			src/get_ptf_flags.c\
+			src/ft_g_flags.c\
 			src/ft_wstring.c\
 			src/ft_wchar.c\
 			src/ft_ptf_bin.c

@@ -48,7 +48,7 @@ int							ft_ptf_bin(va_list ap)
 	int				size;
 	long long		nb;
 
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	size = 16;
 	nb = va_arg(ap, long long);
 	if (flags->setting)

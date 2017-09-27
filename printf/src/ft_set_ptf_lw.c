@@ -38,7 +38,7 @@ static int  set_length(char c, t_flags *flags)
         return (1);
 }
 
-int set_ptf_length(char *arg, t_flags *flags)
+int ft_s_length(char *arg, t_flags *flags)
 {
     if (arg[0] == 'l' || arg[0] == 'h')
     {
@@ -54,7 +54,7 @@ int set_ptf_length(char *arg, t_flags *flags)
         return (0);
 }
 
-int	set_ptf_width(char *arg, va_list args, t_flags *flags)
+int	ft_s_width(char *arg, va_list args, t_flags *flags)
 {
 	char	*tmp;
 	int	nbr;

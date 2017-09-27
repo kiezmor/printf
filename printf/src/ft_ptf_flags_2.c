@@ -16,7 +16,7 @@ int		ft_ptf_long(va_list arg)
 {
 	t_flags		*flags;
 
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	flags->length = 'l';
 	flags->setting = 1;
 	flags->conversion = flags->conversion - 'A' + 'a';
@@ -36,7 +36,7 @@ int					ft_ptf_address(va_list arg)
 	void			*addr;
 	t_flags	*flags;
 
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	addr = va_arg(arg, void *);
 	ft_ptf_putnbr((unsigned long long)addr, 16, 'x');
 	write_address(flags);
@@ -64,7 +64,7 @@ int				ft_ptf_float(va_list arg)
 	t_flags		*flags;
 	int					size;
 
-	flags = get_ptf_flags(GET_FLAGS);
+	flags = ft_g_flags(GET_FLAGS);
 	f = va_arg(arg, double);
 	size = (flags->precision < 0) ? 6 : flags->precision;
 	ft_ptf_double(f, size, flags->conversion);

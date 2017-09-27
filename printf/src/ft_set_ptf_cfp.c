@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int set_ptf_conversion(char *arg, t_flags *flags)
+int ft_s_conv(char *arg, t_flags *flags)
 {
     if (!*arg)
         return (0);
@@ -42,7 +42,7 @@ static int  is_flags(int c, t_flags *flags)
 	return (0);
 }
 
-int		set_ptf_flags(char *args, t_flags *flags)
+int		ft_s_flags(char *args, t_flags *flags)
 {
 	int i;
 
@@ -52,7 +52,7 @@ int		set_ptf_flags(char *args, t_flags *flags)
 	return (i);
 }
 
-int set_ptf_precision(char *arg, va_list args, t_flags *flags)
+int ft_s_prec(char *arg, va_list args, t_flags *flags)
 {
     char    *tmp;
     int nb;
