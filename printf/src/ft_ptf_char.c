@@ -29,6 +29,7 @@ static int	write_char(va_list ap, t_flags *flags)
 		ft_ptf_wchar(wch);
 	else
 	{
+		printf("%i}}}", wch);
 		tab[0] = wch;
 		ft_ptf_buff(tab, BUF_CHAR);
 	}

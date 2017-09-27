@@ -25,12 +25,7 @@ int	main(void)
 	// int		p = 0;
 	// while (p++ <= 100000 * 100)
 	// 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
-	// printf("%s\n", "------------------------------------------------");
 	
-	// void	*bite = "300";
-	// ft_putstr(bite);
-	// ft_putchar('\n');
-
 	// printf("%s\n", "------------------------------------------------");
 
 	// ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
@@ -51,15 +46,13 @@ int	main(void)
 	
 	wchar_t	wc = L'é';
 	wchar_t	*blbl = L"|Hello, world!|";
-	// ft_putwcs(blbl);
-	// ft_putwchar('\n');
 	printf("|WC:%C|\n", wc);
 	printf("|WS:%S|\n", blbl);
 
 	ft_printf("[%S]\n", blbl);
 	ft_printf("[%C]\n", wc);
 
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
 	// float	c,d;
 
