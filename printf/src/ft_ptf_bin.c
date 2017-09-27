@@ -44,7 +44,7 @@ static	void				bin(unsigned long long nb, int size)
 
 int							ft_ptf_bin(va_list ap)
 {
-	t_printf_flags	*flags;
+	t_flags	*flags;
 	int				size;
 	long long		nb;
 
