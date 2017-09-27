@@ -25,11 +25,11 @@ static int	write_char(va_list ap, t_flags *flags)
 	size = flags->width - 1;
 	if (!flags->FLAGS_DASH)
 		ft_ptf_margin(marg, size);
+	printf("%i}}}", wch);
 	if (flags->length == 'l')
 		ft_ptf_wchar(wch);
 	else
 	{
-		printf("%i}}}", wch);
 		tab[0] = wch;
 		ft_ptf_buff(tab, BUF_CHAR);
 	}
