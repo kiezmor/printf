@@ -15,9 +15,9 @@
 
 int	main(void)
 {
-	// char	*str;
-	// char	ch;
-	// int		i;
+	char	*str;
+	char	ch;
+	int		i;
 
 	str = "Hello";
 	ch = '!';
