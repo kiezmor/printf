@@ -49,7 +49,7 @@ int	main(void)
 
 	printf("%s\n", "------------------------------------------------");
 	
-	wchar_t	wc = L'\t';
+	wchar_t	wc = L 146;
 	wchar_t	*blbl = L"|Hello, world!|";
 	// ft_putwcs(blbl);
 	// ft_putwchar('\n');
