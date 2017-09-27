@@ -28,6 +28,7 @@ int	main(void)
 	printf("%s\n", "------------------------------------------------");
 
 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
+	ft_printf("%b\n", 125);
 	// ft_printf("[FUCKING CHAR WITHOUT CAST /%lc\\]\n", ch);
 	// ft_printf("i:%i\n", 300);
 	// ft_printf("%hhd\n", 30000);
