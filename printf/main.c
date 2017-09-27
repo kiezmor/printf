@@ -56,6 +56,8 @@ int	main(void)
 	printf("|WC:%C|\n", wc);
 	printf("|WS:%S|\n", blbl);
 
+	ft_printf("%C\n", wc);
+
 	printf("%s\n", "------------------------------------------------");
 	// int		a,b;
 	// float	c,d;
