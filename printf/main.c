@@ -15,13 +15,13 @@
 
 int	main(void)
 {
-	char	*str;
-	char	ch;
-	int		i;
+	// char	*str;
+	// char	ch;
+	// int		i;
 
-	str = "Hello";
-	ch = '!';
-	i = 100;
+	// str = "Hello";
+	// ch = '!';
+	// i = 100;
 	// int		p = 0;
 	// while (p++ <= 100000 * 100)
 	// 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
@@ -31,21 +31,21 @@ int	main(void)
 	// ft_putstr(bite);
 	// ft_putchar('\n');
 
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 
-	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
-	ft_printf("[FUCKING CHAR WITHOUT CAST /%lc\\]\n", ch);
-	ft_printf("i:%i\n", 300);
-	ft_printf("%hhd\n", 30000);
+	// ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
+	// ft_printf("[FUCKING CHAR WITHOUT CAST /%lc\\]\n", ch);
+	// ft_printf("i:%i\n", 300);
+	// ft_printf("%hhd\n", 30000);
 	
-	printf("%s\n", "------------------------------------------------");
+	// printf("%s\n", "------------------------------------------------");
 
-	long int z = 3000000;
+	// long int z = 3000000;
 
-	printf("|%s world.\n% d %% same %c\n %s|\n", str, i, ch, "try");
-	printf("|FUCKING CHAR WITH CAST /%lc\\|\n", ch);
-	printf("i:%i\n", 300);
-	printf("D:%ld\n", z);
+	// printf("|%s world.\n% d %% same %c\n %s|\n", str, i, ch, "try");
+	// printf("|FUCKING CHAR WITH CAST /%lc\\|\n", ch);
+	// printf("i:%i\n", 300);
+	// printf("D:%ld\n", z);
 
 	printf("%s\n", "------------------------------------------------");
 	
@@ -56,7 +56,8 @@ int	main(void)
 	printf("|WC:%C|\n", wc);
 	printf("|WS:%S|\n", blbl);
 
-	ft_printf("%C\n", wc);
+	ft_printf("[%S]\n", blbl);
+	ft_printf("[%C]\n", wc);
 
 	printf("%s\n", "------------------------------------------------");
 	// int		a,b;
@@ -89,6 +90,16 @@ int	main(void)
 	printf(":%.15s:\n", "Hello, world!");
 	printf(":%15.10s:\n", "Hello, world!");
 	printf(":%-15.10s:\n", "Hello, world!");
+
+	ft_printf(":%s:\n", "Hello, world!");
+	ft_printf(":%15s:\n", "Hello, world!");
+	ft_printf(":%.10s:\n", "Hello, world!");
+	ft_printf(":%-10s:\n", "Hello, world!");
+	ft_printf(":%.*s:\n", 10, "Hello, world!");
+	ft_printf(":%-15s:\n", "Hello, world!");
+	ft_printf(":%.15s:\n", "Hello, world!");
+	ft_printf(":%15.10s:\n", "Hello, world!");
+	ft_printf(":%-15.10s:\n", "Hello, world!");
 
 	printf("%s\n", "------------------------------------------------");
 	return (0);
