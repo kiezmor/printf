@@ -55,8 +55,8 @@ int			ft_ptf_string(va_list arg)
 	int					size;
 
 	flags = get_ptf_flags(GET_FLAGS);
-	//if (flags->length == 'l')
-	//	return (ft_ptf_wstring(arg, flags));
+	if (flags->length == 'l')
+		return (ft_ptf_wstring(arg, flags));
 	str = va_arg(arg, char *);
 	string_rules(flags, str);
 	size = ft_ptf_tmp(str, flags->precision, SET);
