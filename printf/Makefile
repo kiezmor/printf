@@ -34,7 +34,9 @@ NC		=	\x1b[0m
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 
-SRC		=	src/ft_printf.c\
+SRC		=	src/ft_g_flags.c\
+			src/ft_printf.c\
+			src/ft_ptf_bin.c\
 			src/ft_ptf_buff.c\
 			src/ft_ptf_cands.c\
 			src/ft_ptf_char.c\
@@ -52,10 +54,8 @@ SRC		=	src/ft_printf.c\
 			src/ft_ptf_uint.c\
 			src/ft_set_ptf_cfp.c\
 			src/ft_set_ptf_lw.c\
-			src/ft_g_flags.c\
-			src/ft_wstring.c\
 			src/ft_wchar.c\
-			src/ft_ptf_bin.c
+			src/ft_wstring.c
 
 # Rules
 
