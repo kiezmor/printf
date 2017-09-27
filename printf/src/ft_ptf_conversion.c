@@ -34,7 +34,7 @@ t_func	g_flags[] =
 	{ft_ptf_address, 'p'},/**/
 	{ft_ptf_float, 'f'},/**/
 	{ft_ptf_float, 'e'},/**/
-	/*{ft_ptf_bin, 'b'},*/
+	{ft_ptf_bin, 'b'},
 	{NULL, -1}
 };
 

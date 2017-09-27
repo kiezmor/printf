@@ -84,5 +84,6 @@ int					ft_ptf_putdouble(double f, int size);
 int					ft_ptf_atoi(char **arg);
 int					ft_strequ(char *s1, char *s2);
 int					ft_ptf_wstring(va_list ap, t_flags *flags);
+int					ft_ptf_bin(va_list ap);
 
 #endif
