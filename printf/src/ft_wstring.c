@@ -76,16 +76,16 @@ static void		write_wstring(int *str, int p, int len)
 	if (p >= 0)
 	{
 		while (len--)
-			ft_printf_wchar(*str++);
+			ft_ptf_wchar(*str++);
 	}
 	else
 	{
 		while (*str)
-			ft_printf_wchar(*str++);
+			ft_ptf_wchar(*str++);
 	}
 }
 
-int				ft_ptf_wstring(va_list ap, t_printf_flags *flags)
+int				ft_ptf_wstring(va_list ap, t_flags *flags)
 {
 	int		*str;
 	int		prec;
@@ -100,12 +100,12 @@ int				ft_ptf_wstring(va_list ap, t_printf_flags *flags)
 	len = (prec >= 0 && prec < len) ? prec : len;
 	marg = (flags->FLAGS_ZERO) ? '0' : ' ';
 	if (!flags->FLAGS_DASH)
-		ft_printf_margin(marg, flags->width - len);
+		ft_ptf_margin(marg, flags->width - len);
 	if (!str)
-		ft_printf_buffer("(null)", BUF_WRITE);
+		ft_ptf_buff("(null)", BUF_WRITE);
 	else
 		write_wstring(str, prec, l_prec);
 	if (flags->FLAGS_DASH)
-		ft_printf_margin(' ', flags->width - len);
+		ft_ptf_margin(' ', flags->width - len);
 	return (0);
 }
