@@ -19,16 +19,15 @@ int	main(void)
 	// char	ch;
 	// int		i;
 
-	// str = "Hello";
-	// ch = '!';
-	// i = 100;
+	str = "Hello";
+	ch = '!';
+	i = 100;
 	// int		p = 0;
 	// while (p++ <= 100000 * 100)
-	// 	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
 	
-	// printf("%s\n", "------------------------------------------------");
+	printf("%s\n", "------------------------------------------------");
 
-	// ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
+	ft_printf("[%s world.\n%d %% same %c\n %s]\n", str, i, ch, "try");
 	// ft_printf("[FUCKING CHAR WITHOUT CAST /%lc\\]\n", ch);
 	// ft_printf("i:%i\n", 300);
 	// ft_printf("%hhd\n", 30000);
