@@ -74,10 +74,10 @@ int	main(void)
 
 	// printf("%s\n", "------------------------------------------------");
 
-	printf("Float number: |%8.2f|\n", 1234.14159);
-	printf("Hexadecimal: %x\n", 255);
-	printf("Octal: %o\n", 10);
-	printf("Unsigned value: %u\n", 150);
+	// printf("Float number: |%8.2f|\n", 1234.14159);
+	// printf("Hexadecimal: %x\n", 255);
+	// printf("Octal: %o\n", 10);
+	// printf("Unsigned value: %u\n", 150);
 
 	printf("%s\n", "------------------------------------------------");
 
@@ -91,15 +91,15 @@ int	main(void)
 	printf(":%15.10s:\n", "Hello, world!");
 	printf(":%-15.10s:\n", "Hello, world!");
 
-	ft_printf(":%s:\n", "Hello, world!");
-	ft_printf(":%15s:\n", "Hello, world!");
-	ft_printf(":%.10s:\n", "Hello, world!");
-	ft_printf(":%-10s:\n", "Hello, world!");
-	ft_printf(":%.*s:\n", 10, "Hello, world!");
-	ft_printf(":%-15s:\n", "Hello, world!");
-	ft_printf(":%.15s:\n", "Hello, world!");
-	ft_printf(":%15.10s:\n", "Hello, world!");
-	ft_printf(":%-15.10s:\n", "Hello, world!");
+	ft_printf("|%s|\n", "Hello, world!");
+	ft_printf("|%15s|\n", "Hello, world!");
+	ft_printf("|%.10s|\n", "Hello, world!");
+	ft_printf("|%-10s|\n", "Hello, world!");
+	ft_printf("|%.*s|\n", 10, "Hello, world!");
+	ft_printf("|%-15s|\n", "Hello, world!");
+	ft_printf("|%.15s|\n", "Hello, world!");
+	ft_printf("|%15.10s|\n", "Hello, world!");
+	ft_printf("|%-15.10s|\n", "Hello, world!");
 
 	printf("%s\n", "------------------------------------------------");
 	return (0);
