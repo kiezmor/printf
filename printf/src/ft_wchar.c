@@ -77,7 +77,7 @@ static int		write_2byte_char(int c, char *tab)
 		return (ft_ptf_buff(tab, BUF_WRITE));
 }
 
-int				ft_ptf_wchar(int c)
+int			ft_ptf_wchar(int c)
 {
 	char	tab[10];
 

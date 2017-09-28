@@ -65,12 +65,16 @@ int	main(void)
 	// d = c / 3;
 	// printf("|%3.2f|\n",d);
 
-	// printf("%s\n", "------------------------------------------------");
+	printf("%s\n", "------------------------------------------------");
 
 	// printf("Float number: |%8.2f|\n", 1234.14159);
 	// printf("Hexadecimal: %x\n", 255);
 	// printf("Octal: %o\n", 10);
 	// printf("Unsigned value: %u\n", 150);
+	int	n = 233;
+	char	tab[10];
+	ft_itoa(n,tab, 10);
+	printf("%s\n", tab);
 
 	printf("%s\n", "------------------------------------------------");
 

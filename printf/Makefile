@@ -55,7 +55,8 @@ SRC		=	src/ft_g_flags.c\
 			src/ft_set_ptf_cfp.c\
 			src/ft_set_ptf_lw.c\
 			src/ft_wchar.c\
-			src/ft_wstring.c
+			src/ft_wstring.c\
+			src/try.c
 
 # Rules
 
@@ -63,13 +64,13 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
-	ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR)
 	@echo "${G}[OK]${NC}	${Y}Compiling:${NC}" $<
-	$(CC) $(FLAGS) $(INC) -c $< -o $@
+	@$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 #REMOVE KEBAB >>
 
@@ -83,11 +84,11 @@ test:
 # << REMOVE KEBAB
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 	@echo "${R}objects deleted${NC}"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 	@echo "${R}library deleted${NC}"
 
 re: fclean all

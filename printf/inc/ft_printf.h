@@ -86,4 +86,10 @@ int					ft_strequ(char *s1, char *s2);
 int					ft_ptf_wstring(va_list ap, t_flags *flags);
 int					ft_ptf_bin(va_list ap);
 
+size_t	ft_strlen(const char *s);
+char	*ft_strrev(char *s);
+char	*ft_strcpy(char *dest, const char *src);
+void	ft_bzero(void *s, size_t n);
+char	*ft_itoa(int32_t n, char *buffer, int base);
+
 #endif
