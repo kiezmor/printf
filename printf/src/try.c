@@ -89,7 +89,7 @@ static void		normee(int c, char *tab)
 	tab[len] = 0;
 }
 
-static int		4byte_char(int c, char *tab)
+static int		t_4byte_char(int c, char *tab)
 {
 	int	len;
 
@@ -115,7 +115,7 @@ static int		4byte_char(int c, char *tab)
 	return (ft_ptf_buff(tab, BUF_WRITE));
 }
 
-static int		2byte_char(int c, char *tab)
+static int		t_2byte_char(int c, char *tab)
 {
 	int	len;
 
@@ -147,11 +147,11 @@ int			ft_wchar(int c)
 	if (c < 0x200000)
 	{
 		printf("%i\n", 2);
-		return (2byte_char(c, tab));
+		return (t_2byte_char(c, tab));
 	}
 	else
 	{
 		printf("%i\n", 4);
-		return (4byte_char(c, tab));
+		return (t_4byte_char(c, tab));
 	}
 }
