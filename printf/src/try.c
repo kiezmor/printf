@@ -1,3 +1,5 @@
+#include "ft_printf.h"
+
 char	*ft_itoa(int32_t n, char *buffer, int base)
 {
 	int		i;
