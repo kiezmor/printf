@@ -75,7 +75,7 @@ int	main(void)
 	wchar_t	tab = (wchar_t)n;
 	// ft_itoa(n,tab, 10);
 	// printf("%s\n", tab);
-	printf("%s\n", tab);
+	printf("%d\n", tab);
 
 	printf("%s\n", "------------------------------------------------");
 
