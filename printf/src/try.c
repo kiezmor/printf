@@ -110,7 +110,7 @@ static int		t_4byte_char(int c, char *tab)
 		tab[len++] = 0x80 | (c & 0x3F);
 	}
 	else
-		norme(c, tab);
+		normee(c, tab);
 	tab[len] = 0;
 	return (ft_ptf_buff(tab, BUF_WRITE));
 }
