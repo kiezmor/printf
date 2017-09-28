@@ -95,5 +95,6 @@ char	*ft_strrev(char *s);
 char	*ft_strcpy(char *dest, const char *src);
 void	ft_bzero(void *s, size_t n);
 char	*ft_itoa(int32_t n, char *buffer, int base);
+int			ft_wchar(int c);
 
 #endif
