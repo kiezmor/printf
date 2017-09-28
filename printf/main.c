@@ -72,7 +72,7 @@ int	main(void)
 	// printf("Octal: %o\n", 10);
 	// printf("Unsigned value: %u\n", 150);
 	int	n = 233;
-	char	tab[10];
+	char	tab;
 	ft_itoa(n,tab, 10);
 	printf("%s\n", tab);
 	tab = n;
