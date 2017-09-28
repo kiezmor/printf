@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <wchar.h>
+# include <stdint.h>
 
 # define GET			0
 # define SET			1
