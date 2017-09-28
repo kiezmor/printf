@@ -76,7 +76,7 @@ int	main(void)
 	// ft_itoa(n,tab, 10);
 	// printf("%s\n", tab);
 	tab = n;
-	ft_printf("%C\n", tab);
+	printf("%C\n", tab);
 
 	printf("%s\n", "------------------------------------------------");
 
