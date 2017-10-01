@@ -46,7 +46,7 @@ int	main(void)
 	printf("%s\n", "------------------------------------------------");
 	
 	wchar_t	wc = L'é';
-	// wchar_t wch = L'Œ¥';
+	wchar_t wch = L'δ';
 	wchar_t	*blbl = L"|Hello, world!|";
 	char	bitee[4];
 	printf("|WC:%C|\n", wc);
