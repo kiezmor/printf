@@ -96,11 +96,11 @@ int			ft_ptf_wchar(int c)
 	// 	return (write_4byte_char(c, tab));
 	char	t[4];
 	if (c >= 32 && c <= 126)
-		ft_wctomb(t, (wchar_t)c);
-	else
 	{
 		t[0] = (char)c;
 		return(ft_ptf_buff(t, BUF_CHAR));
 	}
+	else
+		ft_wctomb(t, (wchar_t)c);
 	return(ft_ptf_buff(t, BUF_WRITE));
 }
