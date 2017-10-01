@@ -54,9 +54,7 @@ int	main(void)
 	ft_printf("[%S]\n", blbl);
 	ft_printf("[%C]\n", wc);
 	ft_wctomb(bitee, (wchar_t)233);
-	printf("[[%s]]\n", bitee);
-	wctomb(bitee, (wchar_t)233);
-	printf("[%s]\n", bitee);
+	ft_printf("[[%s]]\n", bitee);
 	ft_printf("[|%S|]\n", L"Á±≥");
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;

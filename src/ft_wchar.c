@@ -95,7 +95,7 @@ int			ft_ptf_wchar(int c)
 	// else
 	// 	return (write_4byte_char(c, tab));
 	char	t[4];
-	if (ft_isprint(c))
+	if (c >= 32 && c <= 126)
 		ft_wctomb(t, (wchar_t)c);
 	else
 	{
