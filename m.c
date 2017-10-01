@@ -49,9 +49,9 @@ int	main(void)
 	wchar_t wch = L'δ';
 
 	ft_printf("[%C]\n", wc);
-	printf("{%lc}\n", wc);
+	printf("%lc\n", wc);
 	ft_printf("[|%C|]\n", wch);
-	printf("{|%lc|}\n", wch);
+	printf("%lc\n", wch);
 
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
