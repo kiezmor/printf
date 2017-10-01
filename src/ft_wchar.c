@@ -98,9 +98,9 @@ int			ft_ptf_wchar(int c)
 	if (ft_isprint(c))
 		ft_wctomb(t, (wchar_t)c);
 	else
-		t[1] = (char)c;
-	if (t[0])
-		return(ft_ptf_buff(t, BUF_WRITE));
-	else
+	{
+		t[0] = (char)c;
 		return(ft_ptf_buff(t, BUF_CHAR));
+	}
+	return(ft_ptf_buff(t, BUF_WRITE));
 }
