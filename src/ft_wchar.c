@@ -49,6 +49,7 @@ static int		write_4byte_char(int c, char *tab)
 	else
 		norme(c, tab);
 	tab[len] = 0;
+	printf("%s|buff1|\n", tab);
 	return (ft_ptf_buff(tab, BUF_WRITE));
 }
 
@@ -72,9 +73,15 @@ static int		write_2byte_char(int c, char *tab)
 	}
 	tab[len] = 0;
 	if (!tab[0])
+	{
+		printf("%s|buff2|\n", tab);
 		return (ft_ptf_buff(tab, BUF_CHAR));
+	}
 	else
+	{
+		printf("%s|buff3|\n", tab);
 		return (ft_ptf_buff(tab, BUF_WRITE));
+	}
 }
 
 int			ft_ptf_wchar(int c)
