@@ -55,7 +55,8 @@ int	main(void)
 	ft_printf("[%C]\n", wc);
 	ft_wctomb(bitee, (wchar_t)233);
 	printf("[[%s]]\n", bitee);
-
+	wctomb(bitee, (wchar_t)233);
+	printf("[%s]\n", bitee);
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
 	// float	c,d;
