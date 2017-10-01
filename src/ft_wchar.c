@@ -100,5 +100,5 @@ int			ft_ptf_wchar(int c)
 	if (t[0])
 		return(ft_ptf_buff(t, BUF_WRITE));
 	else
-	return(ft_ptf_buff((char)c, BUF_CHAR));
+	return(ft_ptf_buff((char *)c, BUF_CHAR));
 }
