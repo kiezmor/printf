@@ -140,7 +140,7 @@ $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
 	@ar -x $(LIB)
 	@ar rc $(NAME) $(LIB_O) $(OBJ)
-	@rm -rf $(LIB_O)
+	@rm -rf $(LIB_O) __.SYMDEF SORTED
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
