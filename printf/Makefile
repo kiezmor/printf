@@ -31,6 +31,80 @@ NC		=	\x1b[0m
 
 # Files
 
+LIB		=	libft/libft.a
+LIB_I	=	-I libft/includes
+
+LIB_O	=	ft_atoi.o\
+			ft_itoa.o\
+			ft_memcmp.o\
+			ft_putnbr_fd.o\
+			ft_strcmp.o\
+			ft_strlen.o\
+			ft_strrchr.o\
+			ft_bzero.o\
+			ft_lstadd.o\
+			ft_memcpy.o\
+			ft_putstr.o\
+			ft_strcpy.o\
+			ft_strmap.o\
+			ft_strrev.o\
+			ft_countwords.o\
+			ft_lstdel.o\
+			ft_memdel.o\
+			ft_putstr_fd.o\
+			ft_strdel.o\
+			ft_strmapi.o\
+			ft_strsplit.o\
+			ft_fibonacci.o\
+			ft_lstdelone.o\
+			ft_memmove.o\
+			ft_putwchar.o\
+			ft_strdup.o\
+			ft_strncat.o\
+			ft_strstr.o\
+			ft_isalnum.o\
+			ft_lstiter.o\
+			ft_memset.o\
+			ft_putwcs.o\
+			ft_strequ.o\
+			ft_strncmp.o\
+			ft_strsub.o\
+			ft_isalpha.o\
+			ft_lstmap.o\
+			ft_putchar.o\
+			ft_range.o\
+			ft_striter.o\
+			ft_strncpy.o\
+			ft_strtrim.o\
+			ft_isascii.o\
+			ft_lstnew.o\
+			ft_putchar_fd.o\
+			ft_sqrt.o\
+			ft_striteri.o\
+			ft_strndup.o\
+			ft_tolower.o\
+			ft_isdigit.o\
+			ft_memalloc.o\
+			ft_putendl.o\
+			ft_strcat.o\
+			ft_strjoin.o\
+			ft_strnequ.o\
+			ft_toupper.o\
+			ft_isprint.o\
+			ft_memccpy.o\
+			ft_putendl_fd.o\
+			ft_strchr.o\
+			ft_strlcat.o\
+			ft_strnew.o\
+			ft_wcslen.o\
+			ft_isspace.o\
+			ft_memchr.o\
+			ft_putnbr.o\
+			ft_strclr.o\
+			ft_strlcpy.o\
+			ft_strnstr.o\
+			get_next_line.o
+
 OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
 ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 
@@ -64,7 +138,10 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
-	@ar rc $(NAME) $(OBJ)
+	#@ar rc ptf.a $(OBJ)
+	ar -x $(LIB)
+	ar $(NAME) $(LIB_O) $(OBJ)
+	@rm -rf $(LIB_O)
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c

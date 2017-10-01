@@ -72,8 +72,8 @@ int	main(void)
 	// printf("Octal: %o\n", 10);
 	// printf("Unsigned value: %u\n", 150);
 	int	n = 233;
-	wchar_t	tab = (wchar_t)n;
-	// ft_itoa(n,tab, 10);
+	char	tab[10];
+	ft_itoa(n,tab, 10);
 	// printf("%s\n", tab);
 	printf("%d\n", tab);
 	printf("%s\n", (char *)n);
