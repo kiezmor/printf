@@ -101,7 +101,6 @@ int			ft_ptf_wchar(int c)
 		t[0] = (char)c;
 		return(ft_ptf_buff(t, BUF_CHAR));
 	}
-	else
-		ft_wctomb(t, (wchar_t)c);
+	ft_wctomb(t, (wchar_t)c);
 	return(ft_ptf_buff(t, BUF_WRITE));
 }
