@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <stdint.h>
 # include <stdio.h>
+#include "../libft/includes/libft.h"
 
 # define GET			0
 # define SET			1
