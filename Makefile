@@ -128,8 +128,7 @@ SRC		=	src/ft_g_flags.c\
 			src/ft_set_ptf_cfp.c\
 			src/ft_set_ptf_lw.c\
 			src/ft_wchar.c\
-			src/ft_wstring.c\
-			src/try.c
+			src/ft_wstring.c
 
 # Rules
 
