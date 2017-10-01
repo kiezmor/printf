@@ -138,9 +138,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
-	@ar -x $(LIB)
-	@ar rc $(NAME) $(LIB_O) $(OBJ)
-	@rm -rf $(LIB_O) __.SYMDEF\ SORTED
+	ar rc ptf.a $(OBJ)
+	ar rcT ptf.a $(LIB) $(NAME)
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
