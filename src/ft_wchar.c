@@ -94,7 +94,7 @@ int			ft_ptf_wchar(int c)
 	// 	return (write_2byte_char(c, tab));
 	// else
 	// 	return (write_4byte_char(c, tab));
-	char	t[4];
+	char	*t;
 
 	if (c >= 32 && c <= 126)
 	{
