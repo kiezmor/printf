@@ -159,7 +159,7 @@ test:
 # << REMOVE KEBAB
 
 clean:
-	@rm -f $(OBJ)
+	@rm -rf obj
 	@echo "${R}objects deleted${NC}"
 
 fclean: clean
