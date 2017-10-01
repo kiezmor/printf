@@ -140,7 +140,7 @@ $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
 	#@ar rc ptf.a $(OBJ)
 	ar -x $(LIB)
-	ar $(NAME) $(LIB_O) $(OBJ)
+	ar rc $(NAME) $(LIB_O) $(OBJ)
 	@rm -rf $(LIB_O)
 	@echo "${G}library created${NC}"
 
