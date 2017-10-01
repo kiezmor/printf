@@ -45,12 +45,10 @@ int	main(void)
 
 	printf("%s\n", "------------------------------------------------");
 	
-	wchar_t	wc = L'é';
+	wchar_t	wc = L'ي';
 	wchar_t wch = L'δ';
 	wchar_t	*blbl = L"|Hello, world!|";
 	char	bitee[4];
-	printf("|WC:%C|\n", wc);
-	printf("|WS:%S|\n", blbl);
 
 	ft_printf("[%S]\n", blbl);
 	ft_printf("[%C]\n", wc);
