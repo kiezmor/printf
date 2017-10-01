@@ -23,6 +23,8 @@ static int	write_char(va_list ap, t_flags *flags)
 	tab[1] = 0;
 	marg = (flags->FLAGS_ZERO) ? '0' : ' ';
 	size = flags->width - 1;
+	if (wch == 0)
+		return (0);
 	if (!flags->FLAGS_DASH)
 		ft_ptf_margin(marg, size);
 	if (flags->length == 'l')
