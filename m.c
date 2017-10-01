@@ -53,10 +53,10 @@ int	main(void)
 
 	ft_printf("[%C]\n", wc);
 	ft_printf("{%C}\n", a);
-	printf("%llc\n", a);
+	printf("%lc\n", a);
 	ft_printf("[|%C|]\n", wch);
 	ft_printf("{|%C|}\n", b);
-	printf("%llc\n", b);
+	printf("%lc\n", b);
 
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
