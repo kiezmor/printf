@@ -47,15 +47,12 @@ int	main(void)
 	
 	wchar_t	wc = L'ي';
 	wchar_t wch = L'δ';
-	wchar_t	*blbl = L"|Hello, world!|";
-	char	bitee[4];
 
-	ft_printf("[%S]\n", blbl);
 	ft_printf("[%C]\n", wc);
-	ft_wctomb(bitee, (wchar_t)233);
-	ft_printf("[[%s]]\n", bitee);
+	printf("{%C}\n", wc);
 	ft_printf("[|%C|]\n", wch);
-	
+	printf("{|%C|}\n", wch);
+
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
 	// float	c,d;
