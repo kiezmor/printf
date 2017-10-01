@@ -139,7 +139,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
 	ar rc ptf.a $(OBJ)
-	ar rcT $(NAME) ptf.a $(LIB)
+	ar rcT $(NAME) ptf.a $(LIB) $(INC)
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
