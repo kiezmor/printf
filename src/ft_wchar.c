@@ -96,5 +96,6 @@ int			ft_ptf_wchar(int c)
 	// 	return (write_4byte_char(c, tab));
 	char	t[4];
 
-	return(ft_ptf_buff(ft_wctomb(t, (wchar_t)c), BUF_WRITE));
+	ft_wctomb(t, (wchar_t)c);
+	return(ft_ptf_buff(t, BUF_WRITE));
 }
