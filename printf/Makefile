@@ -32,7 +32,6 @@ NC		=	\x1b[0m
 # Files
 
 LIB		=	libft/libft.a
-LIB_I	=	-I libft/includes
 
 LIB_O	=	ft_atoi.o\
 			ft_itoa.o\
@@ -138,8 +137,9 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
-	ar rc ptf.a $(OBJ)
-	ar rcT $(NAME) ptf.a $(LIB) $(INC)
+	@ar -x $(LIB)
+	@ar rc $(NAME) $(LIB_O) $(OBJ)
+	@rm -rf $(LIB_O) __.SYMDEF\ SORTED
 	@echo "${G}library created${NC}"
 
 $(DOBJ)/%.o:%.c
