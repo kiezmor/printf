@@ -86,12 +86,15 @@ static int		write_2byte_char(int c, char *tab)
 
 int			ft_ptf_wchar(int c)
 {
-	char	tab[10];
+	// char	tab[10];
 
-	printf("%d|int c|\n", c);
+	// printf("%d|int c|\n", c);
 
-	if (c < 0x200000)
-		return (write_2byte_char(c, tab));
-	else
-		return (write_4byte_char(c, tab));
+	// if (c < 0x200000)
+	// 	return (write_2byte_char(c, tab));
+	// else
+	// 	return (write_4byte_char(c, tab));
+	char	t[4];
+
+	return(ft_ptf_buff(ft_wctomb(t, (wchar_t)c), BUF_WRITE));
 }
