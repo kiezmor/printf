@@ -137,7 +137,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@echo "${Y}create the library${NC}"
 	ar rc ptf.a $(OBJ)
-	libtool $(NAME) ptf.a $(LIB)
+	libtool -static -o $(NAME) ptf.a $(LIB)
 	rm -f ptf.a
 	@echo "${G}library created${NC}"
 
