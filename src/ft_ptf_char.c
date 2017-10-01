@@ -25,7 +25,7 @@ static int	write_char(va_list ap, t_flags *flags)
 	size = flags->width - 1;
 	if (!flags->FLAGS_DASH)
 		ft_ptf_margin(marg, size);
-	if (flags->length == 'l' && c != 0)
+	if (flags->length == 'l' && wch != 0)
 		ft_ptf_wchar(wch);
 	else
 	{
