@@ -57,6 +57,7 @@ int	main(void)
 	printf("[[%s]]\n", bitee);
 	wctomb(bitee, (wchar_t)233);
 	printf("[%s]\n", bitee);
+	ft_printf("[|%S|]\n", L"Á±≥");
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
 	// float	c,d;
