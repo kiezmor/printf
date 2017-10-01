@@ -56,7 +56,7 @@ int	main(void)
 	ft_printf("[%C]\n", wc);
 	ft_wctomb(bitee, (wchar_t)233);
 	ft_printf("[[%s]]\n", bitee);
-	ft_printf("[|%C|]\n", L'\u00a5');
+	ft_printf("[|%C|]\n", wch);
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
 	// float	c,d;
