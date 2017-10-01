@@ -52,8 +52,10 @@ int	main(void)
 	wchar_t b = L'\u03c6';
 
 	ft_printf("[%C]\n", wc);
+	ft_printf("{%C}\n", a);
 	printf("%lc\n", a);
 	ft_printf("[|%C|]\n", wch);
+	ft_printf("{|%C|}\n", b);
 	printf("%lc\n", b);
 
 	// printf("%s\n", "------------------------------------------------");
