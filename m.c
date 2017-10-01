@@ -48,10 +48,13 @@ int	main(void)
 	wchar_t	wc = L'ي';
 	wchar_t wch = L'δ';
 
+	wchar_t	a = L'\u0633';
+	wchar_t b = L'\u03c6';
+
 	ft_printf("[%C]\n", wc);
-	printf("%lc\n", wc);
+	printf("%lc\n", a);
 	ft_printf("[|%C|]\n", wch);
-	printf("%lc\n", wch);
+	printf("%lc\n", b);
 
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
