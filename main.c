@@ -46,11 +46,14 @@ int	main(void)
 	
 	wchar_t	wc = L'é';
 	wchar_t	*blbl = L"|Hello, world!|";
+	char	bitee[10];
 	printf("|WC:%C|\n", wc);
 	printf("|WS:%S|\n", blbl);
 
 	ft_printf("[%S]\n", blbl);
 	ft_printf("[%C]\n", wc);
+	ft_wctomb(bitee, (wchar_t)233);
+	printf("%s\n", bitee);
 
 	// printf("%s\n", "------------------------------------------------");
 	// int		a,b;
