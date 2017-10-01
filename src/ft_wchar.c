@@ -95,7 +95,12 @@ int			ft_ptf_wchar(int c)
 	// else
 	// 	return (write_4byte_char(c, tab));
 	char	t[4];
-
-	ft_wctomb(t, (wchar_t)c);
-	return(ft_ptf_buff(t, BUF_WRITE));
+	if (ft_isprint(c))
+		ft_wctomb(t, (wchar_t)c);
+	else
+		t = (char)c;
+	if (t)
+		return(ft_ptf_buff(t, BUF_WRITE));
+	else
+		return (0);
 }

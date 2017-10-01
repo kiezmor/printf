@@ -151,7 +151,7 @@ $(DOBJ)/%.o:%.c
 test:
 	@make re
 	@make clean
-	@$(CC) $(FLAGS) main.c $(NAME) 
+	@$(CC) $(FLAGS) m.c $(NAME) 
 	@./a.out
 	@rm ./a.out
 
