@@ -96,6 +96,7 @@ int			ft_ptf_wchar(int c)
 	// 	return (write_4byte_char(c, tab));
 	// char	t[4];
 	char	t[4];
+	char	tab[10];
 
 	if (c < 0x200000)
 	{
@@ -108,7 +109,7 @@ int			ft_ptf_wchar(int c)
 		return(ft_ptf_buff(t, BUF_WRITE));
 	}
 	else	
-		return (write_4byte_char(c, t));
+		return (write_4byte_char(c, tab));
 	// if (c >= 32 && c <= 126)
 	// {
 	// 	t[0] = (char)c;
