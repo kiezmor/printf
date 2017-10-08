@@ -88,7 +88,7 @@ int			ft_ptf_wchar(int c)
 {
 	char	tab[10];
 
-	printf("%d|int c|\n", c);
+	// printf("%d|int c|\n", c);
 
 	if (c < 0x200000)
 		return (write_2byte_char(c, tab));
