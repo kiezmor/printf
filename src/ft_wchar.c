@@ -97,13 +97,18 @@ int			ft_ptf_wchar(int c)
 	// char	t[4];
 	char	t[4];
 
-	if (c > 0x200000)
-		return (write_4byte_char(c, t));
-	if (c >= 32 && c <= 126)
+	if (c < 0x200000)
 	{
-		t[0] = (char)c;
-		return(ft_ptf_buff(t, BUF_CHAR));
+		ft_wctomb(t, (wchar_t)c);
+		return(ft_ptf_buff(t, BUF_WRITE));
 	}
-	ft_wctomb(t, (wchar_t)c);
-	return(ft_ptf_buff(t, BUF_WRITE));
+	else	
+		return (write_4byte_char(c, t));
+	// if (c >= 32 && c <= 126)
+	// {
+	// 	t[0] = (char)c;
+	// 	return(ft_ptf_buff(t, BUF_CHAR));
+	// }
+	// ft_wctomb(t, (wchar_t)c);
+	// return(ft_ptf_buff(t, BUF_WRITE));
 }
