@@ -95,7 +95,7 @@ int			ft_ptf_wchar(int c)
 	// else
 	// 	return (write_4byte_char(c, tab));
 	// char	t[4];
-	char	t[10];
+	char	t[4];
 
 	if (c > 0x200000)
 		return (write_4byte_char(c, t));
