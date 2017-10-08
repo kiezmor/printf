@@ -99,6 +99,11 @@ int			ft_ptf_wchar(int c)
 
 	if (c < 0x200000)
 	{
+		if (c >= 32 && c <= 126)
+		{
+			t[0] = (char)c;
+			return(ft_ptf_buff(t, BUF_CHAR));
+		}
 		ft_wctomb(t, (wchar_t)c);
 		return(ft_ptf_buff(t, BUF_WRITE));
 	}
