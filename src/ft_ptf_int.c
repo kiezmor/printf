@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 12:21:31 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/23 12:21:31 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:13:13 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static void					write_int(long long nb, t_flags *flags)
 
 int							ft_ptf_int(va_list arg)
 {
-	t_flags	*flags;
+	t_flags			*flags;
 	long long		nbr;
 
 	flags = ft_g_flags(GET_FLAGS);

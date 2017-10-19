@@ -6,10 +6,9 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 12:24:58 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/23 12:24:58 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:14:26 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_printf.h"
 
@@ -76,7 +75,7 @@ static void					u_write(unsigned long long n, t_flags *f)
 int							ft_ptf_uint(va_list arg)
 {
 	unsigned long long	nbr;
-	t_flags		*flags;
+	t_flags				*flags;
 	int					base;
 
 	flags = ft_g_flags(GET_FLAGS);

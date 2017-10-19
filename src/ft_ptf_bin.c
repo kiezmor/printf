@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 16:36:14 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/09/13 16:36:14 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:08:18 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static	void				bin(unsigned long long nb, int size)
 
 int							ft_ptf_bin(va_list ap)
 {
-	t_flags	*flags;
+	t_flags			*flags;
 	int				size;
 	long long		nb;
 

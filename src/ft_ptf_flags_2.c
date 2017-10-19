@@ -6,13 +6,13 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 12:36:52 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/23 12:36:52 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:23:05 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_ptf_long(va_list arg)
+int					ft_ptf_long(va_list arg)
 {
 	t_flags		*flags;
 
@@ -33,7 +33,7 @@ static void			write_address(t_flags *flags)
 
 int					ft_ptf_address(va_list arg)
 {
-	void			*addr;
+	void	*addr;
 	t_flags	*flags;
 
 	flags = ft_g_flags(GET_FLAGS);
@@ -43,7 +43,7 @@ int					ft_ptf_address(va_list arg)
 	return (0);
 }
 
-static int		write_float(t_flags *flags, double f)
+static int			write_float(t_flags *flags, double f)
 {
 	char	*sign;
 
@@ -58,11 +58,11 @@ static int		write_float(t_flags *flags, double f)
 	return (0);
 }
 
-int				ft_ptf_float(va_list arg)
+int					ft_ptf_float(va_list arg)
 {
-	double				f;
-	t_flags		*flags;
-	int					size;
+	double	f;
+	t_flags	*flags;
+	int		size;
 
 	flags = ft_g_flags(GET_FLAGS);
 	f = va_arg(arg, double);

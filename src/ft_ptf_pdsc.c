@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 16:18:44 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/09/15 16:18:44 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:23:30 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ double	ft_ptf_pow(int base, int pow)
 	return (ret);
 }
 
-int	ft_ptf_double_sc(double f, int size)
+int		ft_ptf_double_sc(double f, int size)
 {
 	unsigned long long	nb;
 	long double			r;
@@ -72,4 +72,13 @@ int		ft_ptf_atoi(char **arg)
 	}
 	*arg = str;
 	return (sign * sum);
+}
+
+int		ft_ptf_fd(int fd, int act)
+{
+	static int	ret = 1;
+
+	if (act == SET)
+		ret = fd;
+	return (ret);
 }

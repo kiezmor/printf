@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/05/24 19:05:42 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:06:15 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <stdint.h>
 # include <stdio.h>
-#include "../libft/includes/libft.h"
+# include "../libft/includes/libft.h"
 
 # define GET			0
 # define SET			1
@@ -39,21 +39,21 @@
 # define FLAGS_SPACE	flags[3]
 # define FLAGS_ZERO 	flags[4]
 
-typedef struct	s_func
+typedef struct		s_func
 {
-	int			(*ptrfunc)(va_list ap);
-	char		key;
-}				t_func;
+	int				(*ptrfunc)(va_list ap);
+	char			key;
+}					t_func;
 
-typedef struct	s_flags
+typedef struct		s_flags
 {
-	int			flags[5];
-	int			width;
-	int			precision;
-	char		length;
-	char		conversion;
-	int			setting;
-}				t_flags;
+	int				flags[5];
+	int				width;
+	int				precision;
+	char			length;
+	char			conversion;
+	int				setting;
+}					t_flags;
 
 int					ft_printf(char *format, ...);
 int					ft_ptf_cands(char *fmt, va_list args);
@@ -75,8 +75,8 @@ int					ft_ptf_int(va_list arg);
 int					ft_ptf_join(t_flags *flags, char *str);
 int					ft_ptf_tmp(char *str, int s, int act);
 int					ft_ptf_uint(va_list arg);
-t_flags 			*ft_g_flags(int act);
-int 				ft_s_conv(char *arg, t_flags *flags);
+t_flags				*ft_g_flags(int act);
+int					ft_s_conv(char *arg, t_flags *flags);
 int					ft_s_flags(char *args, t_flags *flags);
 int					ft_s_prec(char *arg, va_list args, t_flags *flags);
 int					ft_s_width(char *arg, va_list args, t_flags *flags);

@@ -6,15 +6,15 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 22:43:24 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/21 22:43:24 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:22:54 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_ptf_percentage(va_list arg)
+int			ft_ptf_percentage(va_list arg)
 {
-	t_flags	*flags;
+	t_flags			*flags;
 	char			margin;
 
 	(void)arg;
@@ -28,10 +28,10 @@ int	ft_ptf_percentage(va_list arg)
 	return (0);
 }
 
-int		ft_ptf_number(va_list arg)
+int			ft_ptf_number(va_list arg)
 {
 	t_flags	*flags;
-	int				*ptr;
+	int		*ptr;
 
 	flags = ft_g_flags(GET_FLAGS);
 	ptr = va_arg(arg, int *);
@@ -50,9 +50,9 @@ static void	string_rules(t_flags *flags, char *str)
 
 int			ft_ptf_string(va_list arg)
 {
-	char				*str;
+	char		*str;
 	t_flags		*flags;
-	int					size;
+	int			size;
 
 	flags = ft_g_flags(GET_FLAGS);
 	if (flags->length == 'l')
@@ -65,7 +65,7 @@ int			ft_ptf_string(va_list arg)
 	return (0);
 }
 
-void	ft_ptf_margin(char c, int a)
+void		ft_ptf_margin(char c, int a)
 {
 	int		i;
 
@@ -75,13 +75,4 @@ void	ft_ptf_margin(char c, int a)
 		while (i++ < a)
 			ft_ptf_buff(&c, BUF_CHAR);
 	}
-}
-
-int	ft_ptf_fd(int fd, int act)
-{
-	static int	ret = 1;
-
-	if (act == SET)
-		ret = fd;
-	return (ret);
 }

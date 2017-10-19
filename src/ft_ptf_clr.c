@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 03:44:55 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/21 03:44:55 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:17:10 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 static int	write_clr(char *clr, char *style)
 {
-	char    *base;
-	char    balise[16];
-	int i;
-	int split;
+	char	*base;
+	char	balise[16];
+	int		i;
+	int		split;
 
 	base = "\033[";
 	split = (clr[0] && style[0]) ? 1 : 0;
@@ -43,7 +43,7 @@ static int	write_clr(char *clr, char *style)
 static int	check_clr(char *tab, char *style)
 {
 	if (!*tab && *style)
-	return (write_clr(style, tab));
+		return (write_clr(style, tab));
 	else if (ft_strequ(tab, "red"))
 		return (write_clr("31", style));
 	else if (ft_strequ(tab, "dark"))
@@ -117,7 +117,7 @@ static int	get_clr(char *str, int size, int j, va_list args)
 	return (ret);
 }
 
-int	ft_ptf_clr(char *str, va_list args)
+int			ft_ptf_clr(char *str, va_list args)
 {
 	int		i;
 	int		j;

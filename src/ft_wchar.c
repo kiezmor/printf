@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 16:02:00 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/09/27 16:02:00 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:11:11 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static int		write_2byte_char(int c, char *tab)
 		return (ft_ptf_buff(tab, BUF_WRITE));
 }
 
-int			ft_ptf_wchar(int c)
+int				ft_ptf_wchar(int c)
 {
 	char	tab[10];
 

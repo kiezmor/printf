@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 03:00:09 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/08/21 03:00:09 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/18 21:10:48 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ static int	set_flags(char *fmt, va_list args, t_flags *flags)
 	return (i);
 }
 
-int		ft_ptf_cands(char *fmt, va_list args)
+int			ft_ptf_cands(char *fmt, va_list args)
 {
-	int	i;
+	int		i;
 	t_flags	*flags;
-	
+
 	flags = ft_g_flags(RESET_FLAGS);
 	i = set_flags(fmt, args, flags);
 	ft_ptf_conversion(args, flags);
