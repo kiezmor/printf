@@ -29,8 +29,5 @@ int			ft_printf(char *fmt, ...)
 			ft_ptf_buff(fmt++, BUF_CHAR);
 	}
 	va_end(args);
-	if (flags->longs != 0)
-		return (flags->longs);
-	else
-		return (ft_ptf_buff(fmt, BUF_READ));
+	return (ft_ptf_buff(fmt, BUF_READ));
 }
