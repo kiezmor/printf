@@ -53,6 +53,7 @@ typedef struct		s_flags
 	char			length;
 	char			conversion;
 	int				setting;
+	int				longs;
 }					t_flags;
 
 int					ft_printf(char *format, ...);

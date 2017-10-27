@@ -15,7 +15,9 @@
 int			ft_printf(char *fmt, ...)
 {
 	va_list		args;
+	t_flags		*flags;
 
+	flags = ft_g_flags(GET_FLAGS);
 	va_start(args, fmt);
 	while (*fmt)
 	{
@@ -27,5 +29,8 @@ int			ft_printf(char *fmt, ...)
 			ft_ptf_buff(fmt++, BUF_CHAR);
 	}
 	va_end(args);
-	return (ft_ptf_buff(fmt, BUF_READ));
+	if (flags->longs != 0)
+		return (flags->longs);
+	else
+		return (ft_ptf_buff(fmt, BUF_READ));
 }
