@@ -63,6 +63,7 @@ int			ft_ptf_string(va_list arg)
 	{
 		ft_putstr(str);
 		flags->longs = ft_strlen(str);
+		printf("%d\n" &flags->longs);
 	}
 	else
 	{
