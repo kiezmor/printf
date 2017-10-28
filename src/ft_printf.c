@@ -15,9 +15,7 @@
 int			ft_printf(char *fmt, ...)
 {
 	va_list		args;
-	t_flags		*flags;
 
-	flags = ft_g_flags(GET_FLAGS);
 	va_start(args, fmt);
 	while (*fmt)
 	{

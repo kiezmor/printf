@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/19 05:05:53 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/10/18 21:06:15 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/26 07:38:13 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 # define BUF_WRITE 		2
 # define BUF_CHAR 		4
 # define BUF_COLOR	 	8
-# define BUF_SIZE		1024
+# define BUF_SIZE		(4096 * 8)
 # define RESET_FLAGS	0
 # define GET_FLAGS 		1
 # define FLAGS_HASH 	flags[0]
@@ -53,7 +53,6 @@ typedef struct		s_flags
 	char			length;
 	char			conversion;
 	int				setting;
-	int				longs;
 }					t_flags;
 
 int					ft_printf(char *format, ...);

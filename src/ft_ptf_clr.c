@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 03:44:55 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/10/18 21:17:10 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/26 07:36:50 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	write_clr(char *clr, char *style)
 	base = "\033[";
 	split = (clr[0] && style[0]) ? 1 : 0;
 	i = 0;
-	while (!(*base == 0 && *clr == 0 && *style == 0))
+	while (!(*base == 0 && *clr == 0 && *style == 0) && i < 14)
 	{
 		if (*base)
 			balise[i] = *base++;

@@ -59,18 +59,9 @@ int			ft_ptf_string(va_list arg)
 		return (ft_ptf_wstring(arg, flags));
 	str = va_arg(arg, char *);
 	string_rules(flags, str);
-	if (ft_strlen(str) > (BUF_SIZE + 1))
-	{
-		ft_putstr(str);
-		flags->longs = ft_strlen(str);
-		printf("%d\n" (flags->longs));
-	}
-	else
-	{
-		size = ft_ptf_tmp(str, flags->precision, SET);
-		flags->precision = (flags->precision > size) ? size : flags->precision;
-		ft_ptf_join(flags, NULL);
-	}
+	size = ft_ptf_tmp(str, flags->precision, SET);
+	flags->precision = (flags->precision > size) ? size : flags->precision;
+	ft_ptf_join(flags, NULL);
 	return (0);
 }
 

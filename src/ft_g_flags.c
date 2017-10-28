@@ -24,7 +24,6 @@ static void	init(t_flags *flags)
 	flags->length = '0';
 	flags->conversion = 0;
 	flags->setting = 0;
-	flags->longs = 0;
 }
 
 t_flags		*ft_g_flags(int act)

@@ -61,9 +61,7 @@ int			ft_ptf_buff(char *str, int act)
 	static int		size = 0;
 	static int		total = 0;
 	int				i;
-	t_flags		*flags;
-	
-	flags = ft_g_flags(GET_FLAGS);
+
 	i = total;
 	if (act == BUF_CHAR)
 		total += write_char(buf, &size, *str);
@@ -71,13 +69,7 @@ int			ft_ptf_buff(char *str, int act)
 		total += write_str(buf, &size, str);
 	else if (act == BUF_READ)
 	{
-		if (flags->longs != 0)
-		{
-			total = flags->longs;
-			printf("bite\n");
-		}
-		else
-			read_buff(buf, &size);
+		read_buff(buf, &size);
 		i = total;
 		total = 0;
 	}
